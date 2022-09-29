@@ -3,6 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ModelDbContext>(opt => {
+    string connectionString = builder.Configuration.GetConnectionString("MySQLConnection");
+    var serverVersion = ServerVersion.AutoDetect(connectionString);
+    opt.UseMySql(connectionString, serverVersion);
+});
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
