@@ -364,4 +364,4 @@ FodyWeavers.xsd
 
 #git忽略
 /Infrastructure/Migrations
-
+/DDDEFCoreDemo/appsettings.json
