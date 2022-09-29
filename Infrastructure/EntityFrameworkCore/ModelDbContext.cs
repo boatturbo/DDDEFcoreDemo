@@ -16,5 +16,11 @@ namespace Infrastructure.EntityFrameworkCore
         }
 
 
+
+        public virtual DbSet<User> User { get; set; } = null!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+        }
     }
 }
