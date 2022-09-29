@@ -9,6 +9,10 @@ builder.Services.AddDbContext<ModelDbContext>(opt => {
     opt.UseMySql(connectionString, serverVersion);
 });
 
+//添加完上面的DbContext依赖注入后：
+//Codefrist 将代码映射到数据库:
+//点击工具 ->NUGET包管理器 -> 程序包管理器控制台 ->"默认项目"选择DbContext所在项目(本解决方案是在Infrastructure项目，要安装Microsoft.EntityFrameworkCore.Tools)
+//依次执行Add-Migration init、Update-Database
 
 // Add services to the container.
 
