@@ -1,15 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Infrastructure.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.EntityFrameworkCore
 {
-    public class ModelDbContext<TDbContext>: DbContext
+    public class ModelDbContext: DbContext
     {
         public ModelDbContext()
         {
 
         }
 
-        public ModelDbContext(DbContextOptions<ModelDbContext<TDbContext>> options)
+        public ModelDbContext(DbContextOptions<ModelDbContext> options)
             : base(options)
         {
         }
